@@ -45,6 +45,9 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -216,6 +219,27 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-map">
+		<div class="container" style="margin-bottom:40px">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2 style="padding-top:50px">Lokasi Resepsi</h2>
+					<a href="https://www.google.com/maps/place/Bangunsari,+Bangun+Kerto,+Turi,+Sleman+Regency,+Special+Region+of+Yogyakarta/@-7.6474182,110.3502362,16z/data=!4m5!3m4!1s0x2e7a5fea00ededc5:0xf4164d1be97f5e56!8m2!3d-7.6482171!4d110.3539676">
+						<span>Bertempat di Bangunsari RT 02 RW 08, <br>
+						Bangunkerto Turi, Sleman, <br>
+						Yogyakarta</span>
+					</a>
+					
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-12">
+					<div id="map"></div>
 				</div>
 			</div>
 		</div>
@@ -430,33 +454,48 @@
 							<div class="owl-carousel-fullwidth">
 								<div class="item">
 									<div class="testimony-slide active text-center">
-										<figure>
-											<img src="images/couple-1.jpg" alt="user">
-										</figure>
-										<span>Suprihatin</span>
+										<span>Tiara</span>
 										<blockquote>
 											<p>
-												"Menjalani pernikahan bukan hal yang mudah untuk dilakukan. Hal tersebut memerlukan banyak persiapan, baik secara fisik maupun mental. Baik secara materi atau pikiran."
+												"Selalu bersama dalam susah dan senang serta tumbuh berdua dan saling menerima adalah kehangatan dalaam keluarga. Semoga senantiasa ditambahkan kebahagiaan ditengah rumah tangga kalian."
 											</p>
 										</blockquote>
 									</div>
 								</div>
 								<div class="item">
 									<div class="testimony-slide active text-center">
-										<figure>
-											<img src="images/couple-2.jpg" alt="user">
-										</figure>
-										<span>Danang</span>
+										<span>Siska</span>
 										<blockquote>
-											<p>"Saling percaya dan saling cinta menjadi satu di antara kunci yang akan menyatukan pasangan selamanya. Perasaan cinta akan benar-benar dapat dibuktikan melalui sebuah pernikahan."</p>
+											<p>"Pernikahan adalah selalu bersama dan tetap satu tujuan meski dengan cara  yang terkadang berbeda , dan pernikahan bagaikan melihat daun yang jatuh dimusim gugur , selalu berubah dan makin indah."</p>
 										</blockquote>
 									</div>
 								</div>
 								<div class="item">
 									<div class="testimony-slide active text-center">
-										<figure>
-											<img src="images/couple-3.jpg" alt="user">
-										</figure>
+										<span>Ny.Yuni Ardani</span>
+										<blockquote>
+											<p>"Selamat menjalankan Ibadah terpanjang, semoga menjadi keluarga yang sakinah mawadah warohma langgeng bahagia dunia akhirat Amiin."</p>
+										</blockquote>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<span>Ina.se</span>
+										<blockquote>
+											<p>"Manusia diciptakan Allah Swt. berpasang-pasangan. Itulah takdir dari Allah Swt. Semoga kalian akan terus bersama hingga ,akhir hayat. Semoga kalian akan bersama pula di dalam surga-Nya kelak. Selamat menempuh hidup baru bestie 😊"</p>
+										</blockquote>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<span>Ratihsund_</span>
+										<blockquote>
+											<p>"Sebelum menemukan atau ditemukan tulang rusuk. Kita pasti akan mengalami patah hati terhebat. Untuk itu tetaplah menjadi kuat sampai akhirnya dipertemukan dengan orang yang tepat "sampai datanglah seorang lelaki yang serius yang datang langsung kepada kedua orangtuamu sampai berakhir dengan kata" Saya terima nikahnya, nikah untuk saya sendiri"😂🥴"</p>
+										</blockquote>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimony-slide active text-center">
 										<span>Yoni</span>
 										<blockquote>
 											<p>
@@ -605,6 +644,13 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<!-- countTo -->
 	<script src="js/jquery.countTo.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="js/google_map.js"></script> -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWiE8XlbnV4hwFcjdHL7PE8gTEpxSaAQo"></script> -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script> -->
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
 
 	<!-- Stellar -->
 	<script src="js/jquery.stellar.min.js"></script>
@@ -622,6 +668,18 @@
 		var name = getUrlParameter('name');
 		console.log(name)
 		$('#name').text(name);
+		
+		var map = L.map('map').setView([-7.64813546309656, 110.35489647041032], 15);
+		
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		var layerGroup = L.layerGroup().addTo(map)
+
+		var marker = L.marker([-7.64813546309656,110.35489647041032]).addTo(layerGroup)
+		marker.bindPopup('Bangunsari RT 02 RW 08, Bangunkerto Turi, Sleman, Yogyakarta')
+		.openPopup()
 	});
 
 	var getUrlParameter = function getUrlParameter(sParam) {
