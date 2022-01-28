@@ -669,7 +669,7 @@
 		console.log(name)
 		$('#name').text(name);
 		
-		var map = L.map('map').setView([-7.64813546309656, 110.35489647041032], 15);
+		var map = L.map('map').setView([-7.6498532441357625, 110.35079409943714], 15);
 		
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -677,7 +677,7 @@
 
 		var layerGroup = L.layerGroup().addTo(map)
 
-		var marker = L.marker([-7.64813546309656,110.35489647041032]).addTo(layerGroup)
+		var marker = L.marker([-7.6498532441357625, 110.35079409943714]).addTo(layerGroup)
 		marker.bindPopup('Bangunsari RT 02 RW 08, Bangunkerto Turi, Sleman, Yogyakarta')
 		.openPopup()
 	});
