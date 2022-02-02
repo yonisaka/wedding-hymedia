@@ -55,10 +55,6 @@
 
 	</head>
 	<body>
-	<!-- <embed name="Music" src="music/warm_memories.mp3" loop="true" hidden="false" autostart="true"> -->
-	<audio autoplay loop>
-		<source src="music/warm_memories.mp3" type="audio/mpeg">
-	</audio>
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
@@ -636,6 +632,9 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	
+	<!-- <audio controls id="audio">
+		<source src="music/warm_memories.mp3" type="audio/mpeg">
+	</audio> -->
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -669,6 +668,10 @@
 
 	<script>
 	$(document).ready(function() {
+		// var audio = $('#audio')[0];
+		$('#page').hover(function(){
+			playMusic();
+		});
 		var name = getUrlParameter('name');
 		console.log(name)
 		$('#name').text(name);
@@ -702,6 +705,10 @@
     return false;
 };
 
+	function playMusic(){
+		var audio = new Audio('music/warm_memories.mp3');
+		audio.play();
+	}
     var d = new Date('2022-02-20');
 
     // default example
